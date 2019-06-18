@@ -1,0 +1,14 @@
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |c|c| } 
+\hline
+type & bytes \\
+\hline
+char & 1 \\ 
+short & 2 \\
+short & 2 \\
+int & 4 \\
+\hline
+\end{tabular}
+\caption{Table to test captions and labels}
+\end{table}

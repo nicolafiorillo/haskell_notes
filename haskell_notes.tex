@@ -1,0 +1,29 @@
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{titleps}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[colorlinks]{hyperref}
+\usepackage{import}
+\usepackage{bookmark}
+
+\graphicspath{{images/}}
+
+\import{}{commands.tex}
+\import{}{page_style.tex}
+
+\begin{document}
+
+    \import{}{cover.tex}
+    \tableofcontents
+
+    \chapter{Introduzione}
+
+    Definiamo \textbf{immagine} una funzione bidimensionale \(f(x, y)\) dove \(x\) e \(y\) sono coordinate spaziali e \(f\) è l'ampiezza (\emph{intensità}) di ogni coppia di coordinate.\\
+    Definiamo \textbf{immagine digitale} quando i valori di \(f\) sono finiti.\\
+
+\end{document}
