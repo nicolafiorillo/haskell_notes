@@ -18,12 +18,47 @@
 
 \begin{document}
 
-    \import{}{cover.tex}
-    \tableofcontents
+\import{}{cover.tex}
+\tableofcontents
 
-    \chapter{Introduzione}
+\chapter{Lambda calculus}
+    \section{Introduzione}
+    L'essenza della programmazione funzionale è che un programma è una combinazione di \textit{espressioni}. Espressioni includono valori concreti, variabili e funzioni.\\
+    Le \textit{funzioni} sono espressioni a cui è applicato un argomento (input, dominio) e, una volta applicato, può essere \textit{reduced} o \textit{evaluated} ad un valore (output, codominio).\\
+    Una funzione è una relazione tra due insiemi; definisce rappresenta quindi una relazione il cui output è sempre prevedibile.\\
+    Haskell è un linguaggio a paradigma funzionale \textit{puro}, cioè che gode della proprietà chiamata \textit{referential transparency}. Ciò significa che dati alcuni valori da valutare, viene ritornato lo stesso risultato.\\
 
-    Definiamo \textbf{immagine} una funzione bidimensionale \(f(x, y)\) dove \(x\) e \(y\) sono coordinate spaziali e \(f\) è l'ampiezza (\emph{intensità}) di ogni coppia di coordinate.\\
-    Definiamo \textbf{immagine digitale} quando i valori di \(f\) sono finiti.\\
+    \section{Definizioni}
+    \textbf{Anonymous function}: \(\lambda x.x\) \\
+    Il punto (\(.\)) separa il parametro dal body della funzione.\\
+    \\
+    \textbf{Alpha equivalence}: es. \(\lambda x.x\), \(\lambda d.d\) e \(\lambda z.z\) rappresentano la stessa funzione. \\
+    \\
+    \textbf{Beta reduction}: Quando si applica un argomento ad una funzione, si sostituisce l'input a tutte le istanze della variabile nel corpo della funzione e viene eliminata la testa.\\
+    L'applicazione del lambda calculus e associativo da sinistra.\\
+    Espressioni riducibili sono chiamate anche \textit{redexes}.
+    \\
+    \textbf{Bounded variable}: variabili nel corpo della funzione che hanno riferimento nella testa. \\
+    \\
+    \textbf{Free variable}: variabili nel corpo della funzione che non hanno riferimento nella testa. \\
+    \\
+    \textbf{Currying}: una lambda può avere un solo parametro e può accettare solo un argomento; funzioni che richiedono argomenti multipli sono innestati: \\
+    \(\lambda xy.xy\) risulta \(\lambda x.(\lambda y.xy)\)\\
+    \\
+    \textbf{Beta normal form}: quando non è più possibile ridurre un'espressione; corridponde quindi ad una espressione completamente valutata o, in Haskell, un programma completamente eseguito. \\
+    \\
+    \textbf{Combinators}: lambda senza free variables (e.g. \(\lambda x.x\)) \\
+    \\
+    \textbf{Divergence}: quando il processo di riduzione risulta infinito.\\
+    \\
+    \textbf{Argument}: valore passato al parametro della funzione quando la funzione è applicata.\\
+    \\
+    \textbf{Parameter}: variabile che rappresenta un valore all'interno della funzione.\\
+
+\chapter{Hello, Haskell!}
+    \textbf{Definire una funzione}\\
+    \texttt{Prelude> let triple x = x * 3} in GHCi\\
+    \texttt{triple x = x * 3} in file sorgente\\
+
 
 \end{document}
